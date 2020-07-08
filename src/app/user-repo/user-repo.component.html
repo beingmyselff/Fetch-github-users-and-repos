@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+    <div *ngFor="let user of users | async ">
+        <div class="column">
+            <div class="card">
+                <h3>{{ user.name }}</h3>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

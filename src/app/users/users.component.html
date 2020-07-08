@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-25">
+            <label for="fname">Search</label>
+        </div>
+        <div class="col-50">
+            <input type="text" id="username" name="usename" [(ngModel)]="searchText" placeholder="Enter users..">
+        </div>
+    </div>
+    
+    <!-- loop over our users and give them each a card and returns filter values based on search text-->
+    <div class="row">
+        <div *ngFor="let user of users | filterPipe : searchText">
+            <div routerLink="/users/{{ user.login }}" class="column">
+                <div class="card">
+                    <h3>{{ user.login }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+.container {
+  margin-top: 62px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  display: grid;
+}
+
+* {
+  box-sizing: border-box;
+}
+  
+  
+  /* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px 10px;
+}
+
+.column:focus {
+  outline: none;
+}
+  
+  /* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+  width: 100%;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.card h3:focus {
+  outline: none;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-50 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 7px 12px 12px 9px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column, .col-25, .col-50 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
